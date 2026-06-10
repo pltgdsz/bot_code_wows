@@ -12,7 +12,10 @@ if not TOKEN:
     raise ValueError("DISCORD_TOKEN manquant")
 
 # 📌 Channel Discord
-CHANNEL_ID = 1513855112089571368
+CHANNEL_ID = os.getenv("channel")
+
+if not CHANNEL_ID:
+    raise ValueError("CHANNEL_ID manquant")
 
 # 🤖 Bot setup
 intents = discord.Intents.default()
