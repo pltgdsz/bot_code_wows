@@ -121,7 +121,7 @@ async def on_ready():
 # ----------------------------
 # 🔁 LOOP 12H
 # ----------------------------
-@tasks.loop(hours=12)
+@tasks.loop(hours=2)
 async def check_codes():
     channel = await bot.fetch_channel(CHANNEL_ID)
 
